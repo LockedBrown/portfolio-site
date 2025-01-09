@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: 'Portfolio-Site', // Specify the output directory name
+    outDir: 'dist', // Change output directory to "dist" (default for Vercel)
   },
 })
