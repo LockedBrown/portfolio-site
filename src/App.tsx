@@ -8,6 +8,7 @@ import { DataProvider } from "./components/Data"; // Import DataProvider
 import "./global.css";
 import Navbar from "./components/Navbar";
 import Contact from "./components/Contact";
+import { Analytics } from "@vercel/analytics/react"; // Import Analytics
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/:project" element={<ProjectDetails />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Analytics /> {/* Add Analytics here */}
         </DataProvider>
       </Router>
     </ThemeProvider>
