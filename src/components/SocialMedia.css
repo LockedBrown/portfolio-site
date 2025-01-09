@@ -1,0 +1,48 @@
+/* Social Media Container for Desktop */
+.social-media-container {
+  position: fixed;
+  top: 50%; /* Position halfway down the screen */
+  right: 20px; /* Align to the right side */
+  transform: translateY(-50%); /* Center the icons vertically */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 1000; /* Ensure icons are above other elements */
+}
+
+/* Social Media Icons */
+.social-icon {
+  display: inline-block;
+  width: 48px; /* Adjust width as needed */
+  height: 48px; /* Adjust height as needed */
+  transition: transform 0.2s ease; /* Add a hover effect */
+  
+}
+/* Hover Effects */
+.social-icon:hover {
+  color: #fbbd00;
+  transform: translateY(-3px);
+}
+.social-logo {
+  width: 100%; /* Ensure the image fills the container */
+  height: 100%; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the image fits nicely */
+  filter: invert(.3); /* Rotate hue to change colors */
+  
+}
+
+/* Hide Social Media Container on Mobile */
+@media (max-width: 768px) {
+  /* On mobile, hide the social media icons */
+  .social-media-container {
+    display: none;
+  }
+
+  /* Inside the dropdown menu, social media icons are displayed */
+  .dropdown-menu .social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+}

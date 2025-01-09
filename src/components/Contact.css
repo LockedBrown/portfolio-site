@@ -1,0 +1,148 @@
+/* Contact Page Styles */
+
+/* Base container styling */
+/* Base container styling */
+.contact-container {
+    padding: 100px 40px 40px; /* Padding to account for navbar */
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh; /* Ensure it fills the entire viewport height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Light Mode */
+  .contact-container.light {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+  }
+  
+  /* Dark Mode */
+  .contact-container.dark {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+  }
+  
+  /* Contact Header */
+  .contact-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .contact-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .contact-header p {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 30px;
+  }
+  
+  /* Email Section */
+  .email-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .email-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .email-section p {
+    font-size: 1.3rem;
+    color: #777;
+  }
+  
+  /* Social Media Section */
+  .social-media-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  /* Individual Social Media Items */
+  .social-media-item {
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+  }
+  
+  .social-media-item:hover {
+    transform: translateY(-10px);
+  }
+  
+  .social-media-item a {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media-item a:hover {
+    color: #0057a3;
+  }
+  
+  .social-media-logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+
+
+
+      .contact-container.light .social-media-item {
+        background: var(--btn-light);
+      }
+      
+      .contact-container.light .social-media-item:hover {
+        background: var(--btn-hover-light);
+      }
+      
+      .contact-container.dark .social-media-item{
+        background: var(--btn-dark);
+      }
+      
+      .contact-container.dark .social-media-item:hover {
+        background: var(--btn-hover-dark);
+      }
+      .contact-container.dark .social-media-item a{
+        color: var(--dark-text);
+      }
+
+      .contact-container.light .social-media-item a{
+        color: var(--light-text);
+      }
+        /* Navbar Social Media Container Hide */
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .social-media-section {
+      grid-template-columns: 1fr; /* Stack social media items on mobile */
+      gap: 20px;
+    }
+  
+    .social-media-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .social-media-item p,
+    .social-media-item ul {
+      font-size: 1rem;
+    }
+  }
+  

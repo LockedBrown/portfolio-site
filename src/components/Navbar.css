@@ -1,0 +1,282 @@
+/* Light Mode */
+.navbar.light {
+    background-color: var(--light-bg); /* Light background */
+    color: black;
+  }
+  
+  /* Dark Mode */
+  .navbar.dark {
+    background-color: var(--dark-bg); /* Dark background */
+    color: white;
+  }
+  
+  /* Navbar Layout */
+  .navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw; /* Ensures full viewport width */
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr; /* Three equal parts: left, center, right */
+    align-items: center;
+    padding: 0 10px;
+    z-index: 1000;
+  }
+  
+  /* Title Styling */
+  .navbar-title {
+    font-size: 36px; /* Title font size */
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+    display: flex;
+    justify-self: end;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  /* Nav Links */
+  nav ul {
+    display: flex;
+    font-size: 20px;
+    list-style: none;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0;
+  }
+  
+  /* Nav Link Styles */
+  .nav-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #00a2ff;
+    transform: scale(1.1);
+  }
+  
+  /* Icon and Theme Toggle Button */
+  .icon-and-theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  
+  .navbar.dark .icon-and-theme-toggle {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) hue-rotate(180deg);
+  }
+  
+  .navbar.dark .icon-and-theme-toggle:hover {
+    filter: invert(32%) sepia(100%) saturate(1400%) hue-rotate(180deg) brightness(98%);
+  }
+  
+  .navbar.light .icon-and-theme-toggle:hover {
+    filter: invert(32%) sepia(100%) saturate(1400%) hue-rotate(180deg) brightness(98%);
+  }
+  
+  /* Theme Icon */
+  .theme-icon {
+    width: 64px;
+    height: 64px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  .moon-icon {
+    background-image: url('/images/moon-icon.png');
+    background-size: cover;
+  }
+  
+  .bulb-icon {
+    background-image: url('/images/bulb-icon.png');
+    background-size: cover;
+  }
+  
+  .icon-and-theme-toggle:hover .theme-icon {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  
+  /* Hamburger Menu Styling */
+  .hamburger-icon {
+    display: none; /* Hidden for desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px; /* Slightly wider for modern look */
+    height: 25px;
+    cursor: pointer;
+    z-index: 1050; /* Ensures hamburger icon is above other elements */
+    position: absolute; /* Position it absolutely in the navbar */
+    right: 15px; /* Keep it fixed on the right side */
+  }
+  
+  .navbar.dark .hamburger-icon .bar {
+    background-color: var(--dark-text); /* White bars in dark mode */
+  }
+  
+  .navbar.light .hamburger-icon .bar {
+    background-color: var(--light-text); /* Black bars in light mode */
+  }
+  .navbar.light .dropdown-menu{
+    background-color: #ffffff;
+  }
+  .navbar.navbar.dark .dropdown-menu{
+    background-color: #000000;
+  }
+  .navbar.dark .dropdown-menu ul{
+    color: white;
+    cursor: pointer;
+  }
+  .navbar.light .dropdown-menu ul{
+    color: black;
+    cursor: pointer;
+  }
+  
+  /* Bar styles */
+  .hamburger-icon .bar {
+    height: 4px;
+    width: 100%;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s ease;
+  }
+  
+  /* Animation for Hamburger Icon */
+  .hamburger-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger-icon.open .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+  }
+  
+  .hamburger-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px; /* Width of the dropdown menu */
+    height: 100vh; /* Full height */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%); /* Initially off-screen */
+    transition: transform 0.3s ease-in-out; /* Slide-in effect */
+    z-index: 1000; /* Ensure it sits on top of other content */
+    padding-top: 60px; /* Space for navbar */
+  }
+  
+  /* Ensure the ul inside dropdown is stacked vertically */
+  .dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Ensure block display */
+  }
+  
+  /* Dropdown Links */
+  .dropdown-menu li {
+    padding: 15px 20px;
+    text-align: center;
+  }
+  
+  .dropdown-menu .nav-link {
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  
+  .dropdown-menu .nav-link:hover {
+    color: #00a2ff; /* Change color on hover */
+  }
+/* For Desktop View */
+.navbar .social-media-container {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+  }
+
+  /* Responsive Design for Mobile */
+  @media (max-width: 768px) {
+
+    .nav-links,
+    .icon-and-theme-toggle {
+      display: none; /* Hide desktop links on mobile */
+    }
+  
+
+  
+    .hamburger-icon {
+      display: flex; /* Show hamburger menu on mobile */
+    }
+ 
+    /* Dropdown for Mobile */
+    .navbar .dropdown-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 250px; /* Full width */
+      background-color: var(--dark-bg);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transform: translateX(100%); /* Off-screen initially */
+      padding-top: 60px;
+    }
+  
+    /* Show dropdown when the class 'show' is added */
+    .navbar .dropdown-menu.show {
+      display: block;
+      transform: translateX(0); /* Slide in from the right */
+      transition: transform 0.3s ease-in-out; /* Slide effect */
+    }
+
+      /* Adjusting the size of icons on mobile */
+  .social-icon {
+    font-size: 1.2rem; /* Smaller size for mobile */
+  }
+
+  /* Adjust the position of social media icons for mobile */
+  .navbar .social-media-container {
+    display: block;
+    position: fixed;
+    top: 120%;
+    left: 20px; /* Align to the left side on mobile */
+    gap: 10px; /* Reduced gap for mobile */
+  }
+
+  /* Mobile social media links in dropdown menu */
+  .dropdown-menu .social-media-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-top: 100%; /* Add space between the menu items and icons */
+  }
+}
+  
+  @media (min-width: 1000px) {
+    .dropdown-menu {
+      display: none; /* Hide dropdown for desktop */
+    }
+  
+    .icon-and-theme-toggle {
+      display: flex; /* Show theme toggle button on desktop */
+    }
+  
+    .hamburger-icon {
+      display: none; /* Hide hamburger menu on desktop */
+    }
+  }
+  

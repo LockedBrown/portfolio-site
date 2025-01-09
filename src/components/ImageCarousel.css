@@ -1,0 +1,109 @@
+/* Carousel container */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust based on preference or screen size */
+  max-height: 600px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Carousel itself, positioning the media */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media wrapper (applies to both images and videos) */
+.carousel-media {
+  position: absolute;
+  max-width: 100%;  /* Adjust for both images and videos */
+  max-height: 100%; /* Ensure media fills the container */
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  opacity: 0.7;  /* Slight opacity for left and right images */
+  transition: all 0.5s ease;
+  transform: scale(0.8) translateX(0);
+  z-index: 1;
+  filter: blur(2px);  /* Blur effect for the left/right images */
+  border-radius: 15px;  /* Rounded corners */
+}
+
+/* Center image/video styles */
+.carousel-media.center {
+  transform: scale(1) translateX(0);
+  z-index: 3;
+  opacity: 1;
+  filter: none;
+}
+
+/* Left and right images/videos */
+.carousel-media.left {
+  transform: translateX(-44%) scale(0.65);
+  z-index: 2;
+}
+
+.carousel-media.right {
+  transform: translateX(44%) scale(0.65);
+  z-index: 2;
+}
+
+/* Hidden image/video */
+.carousel-media.hidden {
+  opacity: 0;
+  z-index: 0;
+}
+
+/* Video specific styling (iframe) */
+.carousel-media iframe {
+  width: 100%;  /* Fill the container's width */
+  height: 100%; /* Fill the container's height */
+  border-radius: 15px;  /* Rounded corners for iframe */
+  object-fit: cover; /* Maintain aspect ratio and cover space */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for center and hiding */
+}
+
+/* Navigation buttons */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  font-size: 25px;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  cursor: pointer;
+  z-index: 4;
+  border-radius: 10%;
+}
+
+.nav-button.prev {
+  left: 22%;
+}
+
+.nav-button.next {
+  right: 22%;
+}
+
+.nav-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Media query adjustments for responsive behavior */
+@media (max-width: 767px) {
+  .carousel-container {
+    height: 40vh;
+    max-height: 350px;
+  }
+
+  .nav-button.prev, .nav-button.next {
+    left: 10px;
+    right: 10px;
+  }
+}

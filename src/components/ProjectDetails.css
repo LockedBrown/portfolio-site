@@ -1,0 +1,202 @@
+
+/* Details page container */
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 20px 20px;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling if not needed */
+}
+
+.details-container.light {
+  color: var(--light-text); /* Dark text color */
+
+  background: var(--light-bg);
+}
+
+.details-container.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+
+
+
+.details-container.light .carousel-container .nav-button,
+.details-container.light .back-to-home-link,
+.not-found-container.light .back-to-home-link {
+  background: var(--btn-light);;
+  color: var(--light-text); /* Dark text color */
+
+}
+
+.details-container.light .carousel-container .nav-button:hover,
+.details-container.light .back-to-home-link:hover,
+.not-found-container.light .back-to-home-link:hover {
+  background: var(--dark-bg-blue);
+}
+
+
+
+.details-container.light .project-description,
+.details-container.light .project-title,
+.details-container.light .project-technologies {
+  color: var(--light-text); /* Dark text color */
+
+}
+
+.details-container.light .carousel-container .nav-button {
+  background: var(--btn-light); /* Subtle gradient */
+  color: var(--light-text); /* Dark text color */
+
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); /* Shadow for light mode */
+
+}
+.details-container.light .carousel-container .nav-button:hover{
+  background: var(--dark-bg-blue); /* Light blue on hover */
+
+}
+
+.details-container.light .back-to-home-link:hover,
+.not-found-container.light .back-to-home-link:hover {
+  background: var(--btn-hover-light); ; /* Light blue on hover */
+  transform: scale(1.1);
+}
+
+.details-container.light .back-to-home-link,
+.not-found-container.light .back-to-home-link {
+  background: var(--btn-light);; /* Subtle gradient */
+  color: var(--light-text); /* Dark text color */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  padding: 12px 12px;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+
+
+.details-container.dark .project-title {
+  color: var(--dark-text);
+}
+
+.details-container.dark .project-description,
+.details-container.dark .project-technologies {
+  color: var(--dark-text);
+}
+/* Dark mode styles */
+.details-container.dark .carousel-container .nav-button {
+  background: var(--btn-dark); ; /* Gradient for dark mode */
+  color: var(--dark-text);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+.details-container.dark .carousel-container .nav-button:hover{
+  background: var(--btn-hover-dark); ; /* Vibrant blue on hover */
+}
+
+.details-container.dark .back-to-home-link:hover,
+.not-found-container.dark .back-to-home-link:hover  {
+  transform: scale(1.1);
+  background: var(--btn-hover-dark); ; /* Vibrant blue on hover */
+}
+
+.details-container.dark .back-to-home-link,
+.not-found-container.dark .back-to-home-link {
+  color: var(--dark-text);
+  background: var(--btn-dark); ; /* Gradient for dark mode */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+}
+
+
+
+
+/* Project title styling */
+.project-title {
+  padding-top: 20px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.project-description,
+.project-technologies {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: center;
+  max-width: 800px;
+}
+
+
+
+/* Styling for the 404 message when project is not found */
+.not-found-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 20px 20px;
+  height: 100vh;
+  
+}
+
+.not-found-container.dark{
+  background: var(--dark-bg);
+}
+.not-found-container.light{
+  background: var(--light-bg);
+}
+
+.not-found-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #d9534f; /* Red for emphasis */
+  margin-bottom: 20px;
+}
+
+.not-found-message {
+  font-size: 20px;
+  color: #d9534f;
+  margin-bottom: 30px;
+}
+
+/* Styling the project-info link as a button */
+.back-to-home-link {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 12px 12px;  /* Add padding to make it look like a button */
+  border-radius: 5px;  /* Rounded corners */
+  background-color: transparent;  /* Transparent background initially */
+  transition: all 0.3s ease;  /* Smooth transition for hover effect */
+  display: inline-block;
+  text-align: center;
+}
+
+
+
+/* Active state for the button */
+.back-to-home-link:active {
+  transform: scale(0.98);  /* Slight shrink effect when clicked */
+}
+
+/* Focus state for accessibility */
+.back-to-home-link:focus {
+  outline: none;
+  border-color: #1686ff;  /* Light blue border on focus */
+  box-shadow: 0 0 0 3px rgba(22, 134, 255, 0.4);  /* Glow effect on focus */
+}
+
+
+
+
+
+
+
+
