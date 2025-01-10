@@ -62,13 +62,16 @@ body {
 }
 
 .about-me-contact-button {
+  display: inline-block; /* Ensure Link behaves like a button */
   margin-top: 75px;
   padding: 12px 25px;
   font-size: 1.2rem;
   color: #1a1a1a;
+  text-align: center; /* Align text within the Link */
   border: none;
   border-radius: 30px;
   cursor: pointer;
+  text-decoration: none; /* Remove underline for links */
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 

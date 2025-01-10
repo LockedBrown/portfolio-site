@@ -20,45 +20,48 @@ const Contact = () => {
       {/* Social Media Section */}
       <div className="social-media-section">
         <div className="social-media-item">
-          <img
-            src="/images/Logos/linkedin.png"
-            alt="LinkedIn"
-            className="social-media-logo"
-          />
           <a
             href="https://www.linkedin.com/in/billybrown14/"
             target="_blank"
             rel="noopener noreferrer"
+            className="social-media-link"
           >
-            LinkedIn
+            <img
+              src="/images/Logos/linkedin.png"
+              alt="LinkedIn"
+              className="social-media-logo"
+            />
+            <span>LinkedIn</span>
           </a>
         </div>
         <div className="social-media-item">
-          <img
-            src="/images/Logos/github.png"
-            alt="GitHub"
-            className="social-media-logo"
-          />
           <a
             href="https://github.com/LockedBrown"
             target="_blank"
             rel="noopener noreferrer"
+            className="social-media-link"
           >
-            GitHub
+            <img
+              src="/images/Logos/github.png"
+              alt="GitHub"
+              className="social-media-logo"
+            />
+            <span>GitHub</span>
           </a>
         </div>
         <div className="social-media-item">
-          <img
-            src="/images/Logos/X.png"
-            alt="Twitter"
-            className="social-media-logo"
-          />
           <a
             href="https://x.com/LockedBrown"
             target="_blank"
             rel="noopener noreferrer"
+            className="social-media-link"
           >
-            Twitter
+            <img
+              src="/images/Logos/X.png"
+              alt="Twitter"
+              className="social-media-logo"
+            />
+            <span>Twitter</span>
           </a>
         </div>
 

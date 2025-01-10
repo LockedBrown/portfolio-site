@@ -1,6 +1,7 @@
 import React from "react";
 import { useTheme } from "./ThemeContext";
 import "./AboutMe.css";
+import { Link } from "react-router-dom";
 
 const AboutMe: React.FC = () => {
   const { isDarkMode } = useTheme();
@@ -19,7 +20,9 @@ const AboutMe: React.FC = () => {
           <p className="about-me-title">
             Cybersecurity & IT Professional | Game Developer
           </p>
-          <button className="about-me-contact-button">Contact Me</button>
+          <Link to={"/Contact"} className="about-me-contact-button">
+            Contact Me
+          </Link>
         </div>
       </div>
 
