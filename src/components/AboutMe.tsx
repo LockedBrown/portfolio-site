@@ -17,9 +17,7 @@ const AboutMe: React.FC = () => {
         />
         <div className="about-me-banner-text">
           <h1 className="about-me-name highlight">Billy Brown</h1>
-          <p className="about-me-title">
-            Cybersecurity & IT Professional | Game Developer
-          </p>
+          <p className="about-me-title">Cybersecurity & IT Professional</p>
           <Link to={"/Contact"} className="about-me-contact-button">
             Contact Me
           </Link>
