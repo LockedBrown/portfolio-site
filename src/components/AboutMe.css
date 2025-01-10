@@ -26,16 +26,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; /* Full viewport height */
+  height: 80vh; 
   padding: 20px;
   box-shadow: 0 5px 15px 0px black;
 }
 
 .about-me-banner-image {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 500px;
   object-fit: cover;
+  border-radius: 15px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
+
 
 .about-me-banner-text {
   max-width: 600px;
@@ -51,7 +57,7 @@ body {
 }
 
 .about-me-name.highlight {
-  color: var(--light-blue-bg); /* Add highlight color to the name */
+  color: var(--light-blue-bg);
 }
 
 .about-me-title {
@@ -62,16 +68,16 @@ body {
 }
 
 .about-me-contact-button {
-  display: inline-block; /* Ensure Link behaves like a button */
+  display: inline-block; 
   margin-top: 75px;
   padding: 12px 25px;
   font-size: 1.2rem;
   color: #1a1a1a;
-  text-align: center; /* Align text within the Link */
+  text-align: center;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  text-decoration: none; /* Remove underline for links */
+  text-decoration: none; 
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
@@ -121,10 +127,10 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  grid-template-columns: repeat(4, 1fr); 
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto; /* Center the grid */
+  margin: 0 auto; 
 }
 
 .skill-card {
@@ -135,10 +141,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .skill-logo {
-  width: 64px; /* Adjust size as needed */
-  height: 64px; /* Maintain aspect ratio */
-  margin-bottom: 10px; /* Add some spacing */
-  object-fit: contain; /* Ensure the logo fits nicely */
+  width: 64px; 
+  height: 64px; 
+  margin-bottom: 10px; 
+  object-fit: contain;
 }
 
 .skill-card:hover {
@@ -218,7 +224,7 @@ body {
 
 .description {
   font-size: 1rem;
-  line-height: 1.6; /* Increase line-height for better readability */
+  line-height: 1.6; 
   margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
@@ -318,14 +324,27 @@ body {
   color: var(--dark-text);
 }
 
+/* Dark Mode - Apply full grayscale by default, but remove it on hover */
 .about-me-container.dark .about-me-banner-image {
-  filter: grayscale(100%); /* No grayscale, full color in dark mode */
+  filter: grayscale(100%); 
+  transition: filter 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
 }
 
-/* Light Mode - Apply full grayscale */
-.about-me-container.light .about-me-banner-image {
-  filter: grayscale(100%); /* Full grayscale, black and white in light mode */
+.about-me-container.dark .about-me-banner-image:hover,
+.about-me-container.light .about-me-banner-image:hover  {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.01);
 }
+
+/* Light Mode - Apply full grayscale by default, but remove it on hover */
+.about-me-container.light .about-me-banner-image {
+  filter: grayscale(100%);
+  transition: filter 0.6s ease-in-out; 
+}
+
+
+
 
 
 

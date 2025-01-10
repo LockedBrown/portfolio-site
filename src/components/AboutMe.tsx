@@ -12,7 +12,7 @@ const AboutMe: React.FC = () => {
       <div className="about-me-banner">
         <img
           src="/images/Me.jpg"
-          alt="John Doe"
+          alt="Picture of me, Billy Brown"
           className="about-me-banner-image"
         />
         <div className="about-me-banner-text">
