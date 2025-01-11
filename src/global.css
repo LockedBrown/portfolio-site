@@ -12,7 +12,7 @@ body{
     --dark-bg: #0f0f0f;
     --dark-bg-blue: linear-gradient(145deg, #00a2ff, #00e1ff);
     --blue-bg: #1687ff;
-    --light-blue-bg: #00a2ff;
+    --light-blue-bg: #ff0000;
     /* Button colours  */
     --btn-light: linear-gradient(145deg, #ffffff, #d6d6d6);
     --btn-dark: linear-gradient(145deg, #3a3a3a, #5d5d5d);

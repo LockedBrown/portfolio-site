@@ -14,7 +14,9 @@ const Contact = () => {
       {/* Email Section */}
       <div className="email-section">
         <h2>Email</h2>
-        <p>lockedbrown@gmail.com</p>
+        <a className="email highlight" href="mailto:lockedbrown@gmail.com">
+          lockedbrown@gmail.com
+        </a>
       </div>
 
       {/* Social Media Section */}

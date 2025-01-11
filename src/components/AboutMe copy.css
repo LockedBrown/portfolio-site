@@ -367,54 +367,6 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
 }
 
-/* Contact me section */
-.contact-me-section {
-  margin-top: 60px;
-  text-align: center;
-  padding-bottom: 100px;
-}
-
-.contact-me-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.contact-me-description {
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-.contact-me-details {
-  margin-top: 40px;
-}
-
-.contact-me-details h3 { /*Email */
-  font-size: 1.2rem;
-  margin: 10px 0;
-  padding-bottom: 30px;
-}
-
-.contact-me-details a {
-  text-decoration: none;
-}
-
-.about-me-container.dark .social-media-item{
-  background: var(--btn-dark);
-  color: var(--dark-text);
-}
-.about-me-container.light .social-media-item{
-  background: var(--btn-light);
-  color: var(--light-text);
-}
-.about-me-container.dark .social-media-item:hover{
-  background: var(--btn-hover-dark);
-  color: var(--dark-text);
-}
-.about-me-container.light .social-media-item:hover{
-  background: var(--btn-hover-light);
-  color: var(--light-text);
-}
-
 
 @media (max-width: 1300px) {
   .skills-grid {

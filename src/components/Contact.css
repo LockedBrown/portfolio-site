@@ -53,9 +53,9 @@
   margin-bottom: 15px;
 }
 
-.email-section p {
+.email-section .email {
+  text-decoration: none;
   font-size: 1.3rem;
-  color: #777;
 }
 
 /* Social Media Section */
@@ -94,9 +94,7 @@
   transition: color 0.3s ease;
 }
 
-.social-media-item a:hover {
-  color: #0057a3; /* Hover effect for the link */
-}
+
 
 .social-media-logo {
   width: 50px;
@@ -108,6 +106,7 @@
 .social-media-item span {
   font-size: 1.2rem; /* Styling for the text */
 }
+
 
 /* Dark Mode / Light Mode Button Styling */
 .contact-container.light .social-media-item {
@@ -140,11 +139,14 @@
   .contact-container {
     padding: 60px 20px; /* Reduce padding on mobile for better fit */
   }
+  .social-media-section{
+    width: 70%;
+  }
 
   /* Stack social media items vertically on mobile */
   .social-media-section {
     grid-template-columns: 1fr; /* Single column on mobile */
-    gap: 20px; /* Less gap between items */
+    gap: 30px; /* Less gap between items */
   }
 
   /* Reduce font size for headings and text on mobile */
@@ -160,7 +162,7 @@
     font-size: 1.5rem; /* Smaller subheading */
   }
 
-  .email-section p {
+  .email-section .email {
     font-size: 1.2rem; /* Smaller text */
   }
 
