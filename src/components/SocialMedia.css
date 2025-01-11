@@ -1,44 +1,85 @@
-/* Social Media Container for Desktop */
-.social-media-container {
-  position: fixed;
-  top: 50%; /* Position halfway down the screen */
-  right: 20px; /* Align to the right side */
-  transform: translateY(-50%); /* Center the icons vertically */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  z-index: 1000; /* Ensure icons are above other elements */
-}
-
 /* Social Media Icons */
 .social-icon {
   display: inline-block;
-  width: 48px; /* Adjust width as needed */
-  height: 48px; /* Adjust height as needed */
-  transition: transform 0.2s ease; /* Add a hover effect */
-  
+  width: 64px; /* Adjust width as needed */
+  height: 64px; /* Adjust height as needed */
+  border-radius: 50%; /* Make the icon circular */
+  position: relative; /* Needed for animations */
+  overflow: hidden; /* Clip anything outside the circle */
+  animation: wiggle 6s infinite; /* Slower overall cycle */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transform and shadow transition when hovering */
 }
-/* Hover Effects */
+
+/* Sequential Animation Delays */
+.social-icon:nth-child(1) {
+  animation-delay: 0s; /* First icon starts immediately */
+}
+.social-icon:nth-child(2) {
+  animation-delay: 0.2s; /* Second icon starts slightly after the first */
+}
+.social-icon:nth-child(3) {
+  animation-delay: 0.4s; /* Third icon starts slightly after the second */
+}
+
+/* Wiggle Animation */
+@keyframes wiggle {
+  0%, 100% { 
+    transform: translateX(0); /* Stay still at the starting point */
+  }
+  25% {
+    transform: translateX(10px); /* Move to the right */
+  }
+  50% {
+    transform: translateX(-10px); /* Move to the left */
+  }
+  75% {
+    transform: translateX(10px); /* Move back to the right */
+  }
+}
+
+/* Hover Effects: Pause animation on hover */
 .social-icon:hover {
-  color: #fbbd00;
-  transform: translateY(-3px);
+  animation-play-state: paused; /* Pause animation for the hovered icon */
+  transform: scale(1.3) !important; /* Slightly enlarge the icon when hovered */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for emphasis */
+  background-color: #ffffff; /* Background for visibility */
 }
+
+/* Tooltip for hover */
+.social-icon:hover::after {
+  content: attr(data-tooltip); /* Show the tooltip text */
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.social-icon::after {
+  opacity: 0; /* Start hidden */
+}
+
+/* Social Media Logos */
 .social-logo {
   width: 100%; /* Ensure the image fills the container */
   height: 100%; /* Maintain aspect ratio */
   object-fit: contain; /* Ensure the image fits nicely */
-  filter: invert(.3); /* Rotate hue to change colors */
-  
+  border-radius: 50%; /* Match the circular shape */
 }
 
 /* Hide Social Media Container on Mobile */
 @media (max-width: 768px) {
-  /* On mobile, hide the social media icons */
   .social-media-container {
     display: none;
   }
 
-  /* Inside the dropdown menu, social media icons are displayed */
   .dropdown-menu .social-media-container {
     display: flex;
     flex-direction: column;
