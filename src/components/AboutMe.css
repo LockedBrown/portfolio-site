@@ -3,230 +3,170 @@ body {
   overflow: auto;
 }
 
-@keyframes wiggle {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(4deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  60% {
-    transform: rotate(3deg);
-  }
-  80% {
-    transform: rotate(-3deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
+/* Body Container */
+.body-container {
+  width: 100%;
+  height: 100%; /* Ensure it takes the full viewport height */
 }
 
-
-
-
-
-
-
-/* General Styles */
-.about-me-container {
+/* About Page Container */
+.about-page-container {
   font-family: 'Roboto', sans-serif;
-  color: #f5f5f5;
   height: 100%;
-  padding-top: 60px;
+  padding-top: 100px;
+  width: 50%;
+  margin: 0 auto;
+
 }
 
-.about-me-container.light {
+ .body-container.light {
   background-color: var(--light-bg);
-  color: #121212;
+  color: var(--light-text);
 }
 
-.about-me-container.dark {
+.body-container.dark {
   background-color: var(--dark-bg);
-  color: #f5f5f5;
+  color: var(--dark-text);
 }
 
-/* Banner Section */
-.about-me-banner {
+/* About Section Banner */
+.about-section-banner {
+  border-radius: 10px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh; 
-  padding: 20px;
-  box-shadow: 0 5px 15px 0px black;
+  text-align: left;
 }
 
-.about-me-banner-image {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 4px; 
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-}
-
-
-.about-me-banner-text {
-  max-width: 600px;
-  margin-left: 100px;
-}
-
-.about-me-name {
+/* Section Names */
+.about-section-name {
   font-size: 2.5rem;
   color: var(--dark-bg-blue);
-  margin-bottom: 10px;
   text-transform: uppercase;
-  font-weight: bold; /* Add bold styling to make the name stand out */
+  font-weight: bold;
 }
 
-.about-me-name.highlight {
+.about-section-name.highlight {
   color: var(--light-blue-bg);
 }
 
-.about-me-title {
+.about-section-title {
   font-size: 1.5rem;
-  color: #d3d3d3;
-  margin-bottom: 15px;
   font-weight: 600;
-}
-
-.about-me-contact-button {
-  display: inline-block;
-  margin-top: 75px;
-  padding: 15px 30px; /* Larger padding */
-  font-size: 1.5rem; /* Larger text */
-  font-weight: bold; /* Make the text stand out */
-  color: #ffffff;
-  text-align: center;
-  border: none;
-  border-radius: 40px; /* More rounded corners */
-  cursor: pointer;
-  text-decoration: none; 
-  
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* About Section */
-.about-section {
-  padding: 100px 20px 20px;
   text-align: left;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
-.about-title {
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 15px;
-  padding-left: 20px;
-}
-
-.about-description {
+.about-section-description {
   font-weight: 200;
   font-size: 1rem;
   line-height: 1.8;
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 40px;
-  color: #d3d3d3;
+  text-align: left;
 }
 
 .highlight {
   color: var(--light-blue-bg);
   font-weight: bold;
 }
-
 /* Skills Section */
-.about-me-skills {
-  text-align: center;
-  margin-top: 100px;
-  padding-bottom: 50px;
+.skills-section {
+  text-align: left;
+  margin-top: 60px;
 }
 
-.about-me-section-title {
+.skills-section-title {
   font-size: 2rem;
   color: var(--dark-bg-blue);
-  margin-bottom: 30px;
   font-weight: 600;
+  text-align: left;
 }
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); 
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   max-width: 1200px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .skill-card {
+  position: relative;
   padding: 20px;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .skill-logo {
-  width: 64px; 
-  height: 64px; 
-  margin-bottom: 10px; 
-  object-fit: contain;
-}
-
-.skill-card:hover {
-
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
-}
-
-.skill-icon {
-  font-size: 2.5rem;
+  width: 64px;
+  height: 64px;
   margin-bottom: 10px;
-  color: var(--dark-bg-blue);
+  object-fit: contain;
+  transition: transform 0.3s ease;
 }
 
 .skill-name {
   font-size: 1.1rem;
   font-weight: 500;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* Work Experience Section */
-.work-experience-section {
-  text-align: center;
-  padding: 50px 20px;
+
+
+.skill-card:hover .skill-logo {
+  transform: translateY(-10px); /* Move icon up on hover */
+  transform: scale(1.2);
 }
-.work-experience-section-title{
+
+.skill-card:hover {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Experience Section */
+.experience-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.experience-section-title {
   font-size: 2rem;
   color: var(--dark-bg-blue);
-  margin-bottom: 30px;
   font-weight: 600;
+  text-align: center;
 }
 
-.work-experience-grid {
+.experience-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
-.work-experience-card {
+.experience-card {
   position: relative;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
-.work-experience-card:hover {
+.experience-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-.work-experience-pin {
+.experience-pin {
   font-size: 2.5rem;
   position: absolute;
   top: -15px;
@@ -253,180 +193,96 @@ body {
 
 .description {
   font-size: 1rem;
-  line-height: 1.6; 
+  line-height: 1.6;
   margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-/* Light and Dark Mode Hovers */
-.work-experience-card {
-  background: var(--btn-light);
-  color: var(--light-text);
-}
-
-.work-experience-card {
-  background: var(--btn-light);
-  color: var(--light-text);
-}
-
-.work-experience-card:hover {
-  transform: scale(1.04);
-}
-
-.about-me-container.dark .work-experience-card {
-  background: var(--btn-dark);
-  color: var(--dark-text);
-}
-
-
-
-
-
-
-
-
-
-
-.skill-card {
-  background: var(--btn-light);
-  color: var(--light-text);
-}
-
-.about-me-container.dark .skill-card {
-  background: var(--btn-dark);
-  color: var(--dark-text);
-}
-
-.about-me-container.dark .skill-card:hover {
-  animation: wiggle 2.5s ease infinite;
-  color: var(--dark-text);
-}
-
-.about-me-container.light .skill-card:hover {
-
-  color: var(--light-text);
-  animation: wiggle 2.5s ease infinite;
-}
-
-
-/* About Section Dark / Light Mode Styling */
-.about-me-container.light .about-section,
-.about-me-container.light .about-description {
-  color: var(--light-text);
-}
-
-.about-me-container.dark .about-section,
-.about-me-container.dark .about-description {
-  color: var(--dark-text);
-}
-
-/* Contact Button Dark / Light Mode Styling */
-.about-me-container.dark .about-me-contact-button {
-  border: 1px solid rgba(255, 255, 255, 0.396);
-  color: var(--dark-text);
-  background: var(--btn-dark);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.about-me-container.dark .about-me-contact-button:hover {
-  transform: scale(1.1);
-  background: var(--btn-hover-dark);
-}
-
-.about-me-container.light .about-me-contact-button {
-  border: 1px solid rgba(0, 0, 0, 0.396);
-  color: var(--light-text);
-  background: var(--btn-light);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.about-me-container.light .about-me-contact-button:hover {
-  transform: scale(1.1);
-  background: var(--dark-bg-blue);
-}
-
-.about-me-container.light .about-me-title{
-  color: var(--light-text);
-}
-.about-me-container.dark .about-me-title{
-  color: var(--dark-text);
-}
-
-/* Dark Mode - Apply full grayscale by default, but remove it on hover */
-.about-me-container.dark .about-me-banner-image {
-  filter: grayscale(100%); 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
-}
-
-
-
-/* Light Mode - Apply full grayscale by default, but remove it on hover */
-.about-me-container.light .about-me-banner-image {
-  filter: grayscale(100%);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
-}
-
-/* Contact me section */
-.contact-me-section {
+/* Contact Section */
+.contact-section {
   margin-top: 60px;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 
-.contact-me-title {
+.contact-title {
   font-size: 2.5rem;
   font-weight: bold;
 }
 
-.contact-me-description {
+.contact-description {
   font-size: 1.2rem;
   margin-top: 20px;
 }
 
-.contact-me-details {
-  margin-top: 40px;
-}
-
-.contact-me-details h3 { /*Email */
+.contact-details h3 {
   font-size: 1.2rem;
-  margin: 10px 0;
   padding-bottom: 30px;
 }
 
-.contact-me-details a {
+.contact-details a {
   text-decoration: none;
 }
 
-.about-me-container.dark .social-media-item{
+
+/* Reset padding and margin for About Section Name and Title */
+.about-section-name,
+.about-section-title {
+  margin: 0;
+  padding: 0;
+}
+
+.experience-section-title,
+.skills-section-title {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+/* Dark and Light Mode */
+.body-container.dark .experience-card {
   background: var(--btn-dark);
   color: var(--dark-text);
 }
-.about-me-container.light .social-media-item{
+
+.body-container.dark .skill-card,
+.body-container.dark .social-media-item,
+.body-container.dark .experience-card {
+  background: var(--btn-dark);
+  color: var(--dark-text);
+}
+.body-container.light .skill-card,
+.body-container.light .social-media-item,
+.body-container.light .experience-card {
   background: var(--btn-light);
   color: var(--light-text);
 }
-.about-me-container.dark .social-media-item:hover{
+
+.body-container.dark .social-media-item:hover{
   background: var(--btn-hover-dark);
-  color: var(--dark-text);
 }
-.about-me-container.light .social-media-item:hover{
+.body-container.light .social-media-item:hover{
   background: var(--btn-hover-light);
-  color: var(--light-text);
 }
 
+/* Media Queries */
 
-@media (max-width: 1300px) {
+/* For Larger Screens */
+@media (max-width: 1600px) {
+  .about-page-container{
+    width: 65%;
+  }
   .skills-grid {
-    grid-template-columns: repeat(6, 1fr); /* 2 columns on mobile */
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
   }
 
-
   .skill-card {
-    width: 100%; /* Ensure all skill cards are consistent in size */
+    width: 100%;
     padding: 15px;
     box-sizing: border-box;
     display: flex;
@@ -434,68 +290,36 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: auto; /* Allow cards to adjust height to content */
+    height: auto;
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  /* Banner Section */
-  .about-me-banner {
+/* For Tablets */
+@media (max-width: 1000px) {
+  .about-section-banner {
     flex-direction: column;
     height: auto;
     padding: 20px;
   }
 
-  .about-me-banner-text {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .about-me-banner-image {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-  }
-
-  .about-me-name {
+  .about-section-name {
     font-size: 2rem;
   }
 
-  .about-me-title {
+  .about-section-title {
     font-size: 1.2rem;
   }
 
-  .about-me-contact-button {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-
-  /* About Section */
-  .about-section {
-    padding: 50px 20px;
-  }
-
-  .about-title {
-    font-size: 1.8rem;
-  }
-
-  .about-description {
-    font-size: 0.9rem;
-    padding-left: 20px;
-  }
-
-  /* Skills Section */
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     max-width: 90%;
     margin: 0 auto;
   }
-
 
   .skill-card {
     width: 95%;
@@ -510,16 +334,15 @@ body {
     font-size: 1rem;
   }
 
-  /* Work Experience Section */
-  .work-experience-grid {
-    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+  .experience-grid {
+    grid-template-columns: 1fr;
   }
 
-  .work-experience-card {
+  .experience-card {
     padding: 15px;
   }
 
-  .work-experience-pin {
+  .experience-pin {
     font-size: 2rem;
   }
 
@@ -540,30 +363,26 @@ body {
   }
 }
 
+/* For Mobile */
 @media (max-width: 480px) {
-  .about-me-name {
+  .about-section-name {
     font-size: 1.8rem;
   }
 
-  .about-me-title {
+  .about-section-title {
     font-size: 1.1rem;
   }
 
-  .about-me-contact-button {
-    font-size: 1.1rem;
-    padding: 10px 20px;
+  .contact-details h3 {
+    font-size: 1rem;
   }
 
-  .about-title {
-    font-size: 1.6rem;
-  }
-
-  .about-description {
-    font-size: 0.85rem;
+  .contact-details a {
+    font-size: 1rem;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr); /* 1 column on very small screens */
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-card {
@@ -572,5 +391,9 @@ body {
 
   .skill-icon {
     font-size: 1.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
   }
 }
