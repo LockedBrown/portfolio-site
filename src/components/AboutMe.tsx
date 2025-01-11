@@ -28,20 +28,15 @@ const AboutMe: React.FC = () => {
       <section className="about-section">
         <h2 className="about-title">About</h2>
         <p className="about-description">
-          As a Cybersecurity graduate with a strong foundation in IT support,
-          networking, and programming, I have developed a passion for creating
-          secure and efficient solutions. I thrive on tackling complex
-          challenges and continuously learning to stay ahead in the rapidly
-          evolving tech landscape. I am{" "}
+          I’m a Cybersecurity graduate with a solid background in IT support,
+          networking, and programming. I enjoy solving problems and applying
+          what I’ve learned to practical challenges. I am{" "}
           <span className="highlight">
-            adaptable, detail-oriented, and a collaborative problem-solver
+            adaptable, detail-oriented, and focused on getting results
           </span>
-          . Beyond my professional life, I've committed to improving my health
-          and fitness, having successfully transformed my lifestyle over 2024.
-          This journey has taught me discipline, perseverance, and the
-          importance of a balanced life. Excited to apply my academic knowledge
-          and skills to real-world projects, I am eager to contribute to a team
-          of driven professionals and grow within the industry.
+          . In 2024, I improved my health and fitness, which strengthened my
+          discipline and focus. I’m ready to bring my skills to real-world
+          projects and contribute to a team working on meaningful solutions.
         </p>
       </section>
 
@@ -150,7 +145,6 @@ const AboutMe: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Work Experience Section */}
       <section className="work-experience-section">
         <h2 className="work-experience-section-title">Work Experience</h2>
@@ -161,12 +155,10 @@ const AboutMe: React.FC = () => {
             <p className="role highlight">BSc (Hons) Cyber Security</p>
             <p className="duration">2021 - 2024</p>
             <p className="description">
-              At the University of West London, I gained hands-on experience in
-              Cyber Security through various projects. My final dissertation
-              involved developing a cybersecurity learning game, and I also
-              worked with a team to create an ISO 27001 compliance application
-              for a business, producing a comprehensive 35,000-word document
-              detailing security requirements and procedures.
+              I developed hands-on cybersecurity skills through projects like
+              creating a cybersecurity learning game and working on an ISO 27001
+              compliance application for a business. This included producing a
+              detailed document outlining security requirements and procedures.
             </p>
           </div>
           <div className="work-experience-card">
@@ -175,13 +167,10 @@ const AboutMe: React.FC = () => {
             <p className="role highlight">Volunteer</p>
             <p className="duration">2017 - 2018</p>
             <p className="description">
-              While volunteering at Crystal I.T, I shadowed the graphic designer
-              and assisted with various IT tasks in a small company environment,
-              such as networking, graphic design, and I.T support. This
-              experience gave me exposure to a wide range of tasks, from
-              troubleshooting hardware issues to working on visual design
-              elements, while further developing my technical and communication
-              skills.
+              I supported IT tasks like troubleshooting hardware, assisting with
+              networking, and contributing to graphic design. This experience
+              helped me develop technical skills and adapt to different
+              responsibilities in a small team environment.
             </p>
           </div>
           <div className="work-experience-card">
@@ -190,15 +179,10 @@ const AboutMe: React.FC = () => {
             <p className="role highlight">Level 2-3 I.T Student</p>
             <p className="duration">2019 - 2021</p>
             <p className="description">
-              As part of my Foundation for Information Technology course, I
-              learned the fundamentals of various IT disciplines to help me
-              discover my preferred area of expertise. This included project
-              planning and design, as well as gaining experience in web, game,
-              and app development. I also focused on technical documentation
-              writing, creating spreadsheets and databases, and managing
-              reports. This course helped me build a strong foundational
-              understanding of IT, giving me a broad skill set that I could
-              apply to more specialized fields in my further studies.
+              I built a strong IT foundation by working on projects in web,
+              game, and app development, along with technical documentation,
+              spreadsheets, and databases. This gave me versatile skills that I
+              applied to more specialized fields in my later studies.
             </p>
           </div>
         </div>
