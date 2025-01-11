@@ -16,10 +16,10 @@ body {
   padding-top: 100px;
   width: 50%;
   margin: 0 auto;
-
+  text-align: left; /* Default text alignment is left on desktop */
 }
 
- .body-container.light {
+.body-container.light {
   background-color: var(--light-bg);
   color: var(--light-text);
 }
@@ -36,7 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: left;
+  text-align: left; /* Left-align text for desktop */
 }
 
 /* Section Names */
@@ -45,6 +45,7 @@ body {
   color: var(--dark-bg-blue);
   text-transform: uppercase;
   font-weight: bold;
+  text-align: left; /* Left-align section names */
 }
 
 .about-section-name.highlight {
@@ -54,7 +55,7 @@ body {
 .about-section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  text-align: left;
+  text-align: left; /* Left-align section titles */
 }
 
 .about-section-description {
@@ -64,16 +65,17 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 40px;
-  text-align: left;
+  text-align: left; /* Left-align description text */
 }
 
 .highlight {
   color: var(--light-blue-bg);
   font-weight: bold;
 }
+
 /* Skills Section */
 .skills-section {
-  text-align: left;
+  text-align: left; /* Left-align text for desktop */
   margin-top: 60px;
 }
 
@@ -81,7 +83,7 @@ body {
   font-size: 2rem;
   color: var(--dark-bg-blue);
   font-weight: 600;
-  text-align: left;
+  text-align: left; /* Left-align skills section title */
 }
 
 .skills-grid {
@@ -90,6 +92,7 @@ body {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: left; /* Align skill grid items to the left */
 }
 
 .skill-card {
@@ -116,8 +119,6 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-
-
 .skill-card:hover .skill-logo,
 .skill-card:hover .skill-name {
   transform: translateY(-10px); /* Move icon up on hover */
@@ -128,18 +129,17 @@ body {
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
-
 /* Experience Section */
 .experience-section {
   margin-top: 60px;
-  text-align: center;
+  text-align: left; /* Left-align text for experience section */
 }
 
 .experience-section-title {
   font-size: 2rem;
   color: var(--dark-bg-blue);
   font-weight: 600;
-  text-align: center;
+  text-align: left; /* Left-align experience section title */
 }
 
 .experience-grid {
@@ -149,6 +149,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+  justify-content: left; /* Align experience grid items to the left */
 }
 
 .experience-card {
@@ -202,7 +203,7 @@ body {
 /* Contact Section */
 .contact-section {
   margin-top: 60px;
-  text-align: center;
+  text-align: center; /* Left-align text for contact section */
   padding-bottom: 60px;
 }
 
@@ -225,12 +226,12 @@ body {
   text-decoration: none;
 }
 
-
 /* Reset padding and margin for About Section Name and Title */
 .about-section-name,
 .about-section-title {
   margin: 0;
   padding: 0;
+  text-align: left; /* Ensure left alignment for about section name and title */
 }
 
 .experience-section-title,
@@ -253,6 +254,7 @@ body {
   background: var(--btn-dark);
   color: var(--dark-text);
 }
+
 .body-container.light .skill-card,
 .body-container.light .social-media-item,
 .body-container.light .experience-card {
@@ -263,22 +265,25 @@ body {
 .body-container.dark .social-media-item:hover{
   background: var(--btn-hover-dark);
 }
+
 .body-container.light .social-media-item:hover{
   background: var(--btn-hover-light);
 }
 
 /* Media Queries */
 
-/* For Larger Screens */
+/* For Larger Screens (Desktop) */
 @media (max-width: 1600px) {
-  .about-page-container{
+  .about-page-container {
     width: 65%;
   }
+
   .skills-grid {
     grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     max-width: 100%;
     margin: 0 auto;
+    justify-content: left; /* Align grid items to the left */
   }
 
   .skill-card {
@@ -300,18 +305,26 @@ body {
 
 /* For Tablets */
 @media (max-width: 1000px) {
+  .about-page-container {
+    width: 85%;
+    text-align: center; /* Center text on tablet */
+  }
+
   .about-section-banner {
     flex-direction: column;
     height: auto;
     padding: 20px;
+    text-align: center; /* Center text for the tablet */
   }
 
   .about-section-name {
     font-size: 2rem;
+    text-align: center; /* Center section name */
   }
 
   .about-section-title {
     font-size: 1.2rem;
+    text-align: center; /* Center section title */
   }
 
   .skills-grid {
@@ -319,19 +332,13 @@ body {
     gap: 20px;
     max-width: 90%;
     margin: 0 auto;
+    justify-content: center; /* Center grid items */
   }
 
   .skill-card {
     width: 95%;
     margin: 0 auto;
-  }
-
-  .skill-icon {
-    font-size: 2rem;
-  }
-
-  .skill-name {
-    font-size: 1rem;
+    text-align: center; /* Center skill cards */
   }
 
   .experience-grid {
@@ -341,36 +348,36 @@ body {
   .experience-card {
     padding: 15px;
   }
-
-  .experience-pin {
-    font-size: 2rem;
-  }
-
-  .company-name {
-    font-size: 1.3rem;
-  }
-
-  .role {
-    font-size: 1rem;
-  }
-
-  .duration {
-    font-size: 0.9rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-  }
 }
 
+
+
 /* For Mobile */
-@media (max-width: 480px) {
+@media (max-width: 999px) {
+  .about-page-container {
+    width: 85%;
+    text-align: center; /* Center text on mobile */
+  }
+  .skills-section-title, .experience-section-title{
+    text-align: center;
+  }
+
+  .about-section-banner, .about-section-description{
+    padding: 0px;
+    text-align: center;
+  }
+  .about-section-title{
+    padding-bottom: 30px;
+  }
+
   .about-section-name {
     font-size: 1.8rem;
+    text-align: center; /* Center section name */
   }
 
   .about-section-title {
     font-size: 1.1rem;
+    text-align: center; /* Center section title */
   }
 
   .contact-details h3 {
@@ -383,10 +390,7 @@ body {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skill-card {
-    width: 99%;
+    justify-content: center; /* Center grid items */
   }
 
   .skill-icon {
@@ -396,4 +400,5 @@ body {
   .skill-name {
     font-size: 0.9rem;
   }
+
 }
