@@ -167,21 +167,22 @@ body{overflow-y: hidden;}
   text-decoration: none;
   font-weight: bold;
   font-size: 26px;
-  padding: 12px 24px;
-  border: 3px solid black;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 40px;
   background-color: transparent;
   transition: all 0.3s ease;
   display: inline-block;
   text-align: center;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
 }
 /* View Project Button Dark / light styling*/
 .project-list-container.dark .project-info a {
+  border: 1px solid rgba(255, 255, 255, 0.396);
   background: var(--btn-dark);
   color: #ffffff;
 }
 .project-list-container.light .project-info a {
+  border: 1px solid rgba(0, 0, 0, 0.396);
   background: linear-gradient(145deg, #00a2ffad, #ffffff);
   color: #121212;
 }
