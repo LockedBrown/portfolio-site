@@ -16,15 +16,13 @@ const AboutMe: React.FC = () => {
               Cybersecurity & IT Professional
             </p>
             <p className="about-section-description">
-              I’m a Cybersecurity graduate with a solid background in IT
-              support, networking, and programming. I enjoy solving problems and
-              applying what I’ve learned to practical challenges. I am{" "}
+              {" "}
+              I'm a First Class Honours Cybersecurity graduate with experience
+              in IT support, networking, and programming.{" "}
               <span className="highlight">
-                adaptable, detail-oriented, and focused on getting results
-              </span>
-              . In 2024, I improved my health and fitness, which strengthened my
-              discipline and focus. I’m ready to bring my skills to real-world
-              projects and contribute to a team working on meaningful solutions.
+                Focused, disciplined, and ready to bring my skills to real-world
+                projects.
+              </span>{" "}
             </p>
           </div>
         </div>
