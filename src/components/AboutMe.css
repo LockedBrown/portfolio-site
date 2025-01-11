@@ -3,6 +3,33 @@ body {
   overflow: auto;
 }
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(4deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
+
+
 /* General Styles */
 .about-me-container {
   font-family: 'Roboto', sans-serif;
@@ -37,7 +64,7 @@ body {
   height: auto;
   max-height: 500px;
   object-fit: cover;
-  border-radius: 15px; 
+  border-radius: 4px; 
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
@@ -68,19 +95,21 @@ body {
 }
 
 .about-me-contact-button {
-  display: inline-block; 
+  display: inline-block;
   margin-top: 75px;
-  padding: 12px 25px;
-  font-size: 1.2rem;
-  color: #1a1a1a;
+  padding: 15px 30px; /* Larger padding */
+  font-size: 1.5rem; /* Larger text */
+  font-weight: bold; /* Make the text stand out */
+  color: #ffffff;
   text-align: center;
   border: none;
-  border-radius: 30px;
+  border-radius: 40px; /* More rounded corners */
   cursor: pointer;
   text-decoration: none; 
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* About Section */
 .about-section {
   padding: 100px 20px 20px;
@@ -127,7 +156,7 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(6, 1fr); 
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto; 
@@ -148,7 +177,7 @@ body {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -242,7 +271,7 @@ body {
 }
 
 .work-experience-card:hover {
-  background: var(--btn-hover-light);
+  transform: scale(1.04);
 }
 
 .about-me-container.dark .work-experience-card {
@@ -250,9 +279,14 @@ body {
   color: var(--dark-text);
 }
 
-.about-me-container.dark .work-experience-card:hover {
-  background: var(--btn-hover-dark);
-}
+
+
+
+
+
+
+
+
 
 .skill-card {
   background: var(--btn-light);
@@ -265,23 +299,16 @@ body {
 }
 
 .about-me-container.dark .skill-card:hover {
-  background: var(--btn-hover-dark);
+  animation: wiggle 2.5s ease infinite;
   color: var(--dark-text);
 }
 
 .about-me-container.light .skill-card:hover {
-  background: var(--dark-bg-blue);
+
   color: var(--light-text);
+  animation: wiggle 2.5s ease infinite;
 }
 
-.about-me-container.light .work-experience-card:hover .role
-{
-  color: var(--light-text);
-}
-.about-me-container.dark .work-experience-card:hover .role
-{
-  color: var(--dark-text);
-}
 
 /* About Section Dark / Light Mode Styling */
 .about-me-container.light .about-section,
@@ -296,6 +323,7 @@ body {
 
 /* Contact Button Dark / Light Mode Styling */
 .about-me-container.dark .about-me-contact-button {
+  border: 1px solid rgba(255, 255, 255, 0.396);
   color: var(--dark-text);
   background: var(--btn-dark);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -307,6 +335,7 @@ body {
 }
 
 .about-me-container.light .about-me-contact-button {
+  border: 1px solid rgba(0, 0, 0, 0.396);
   color: var(--light-text);
   background: var(--btn-light);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -327,23 +356,39 @@ body {
 /* Dark Mode - Apply full grayscale by default, but remove it on hover */
 .about-me-container.dark .about-me-banner-image {
   filter: grayscale(100%); 
-  transition: filter 0.3s ease-in-out;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
 }
 
-.about-me-container.dark .about-me-banner-image:hover,
-.about-me-container.light .about-me-banner-image:hover  {
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.01);
-}
+
 
 /* Light Mode - Apply full grayscale by default, but remove it on hover */
 .about-me-container.light .about-me-banner-image {
   filter: grayscale(100%);
-  transition: filter 0.6s ease-in-out; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /
 }
 
 
+@media (max-width: 1300px) {
+  .skills-grid {
+    grid-template-columns: repeat(6, 1fr); /* 2 columns on mobile */
+    gap: 20px;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+
+  .skill-card {
+    width: 100%; /* Ensure all skill cards are consistent in size */
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto; /* Allow cards to adjust height to content */
+  }
+}
 
 
 
@@ -403,6 +448,7 @@ body {
     margin: 0 auto;
   }
 
+
   .skill-card {
     width: 95%;
     margin: 0 auto;
@@ -456,7 +502,7 @@ body {
   }
 
   .about-me-contact-button {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     padding: 10px 20px;
   }
 
@@ -469,7 +515,7 @@ body {
   }
 
   .skills-grid {
-    grid-template-columns: 1fr; /* 1 column on very small screens */
+    grid-template-columns: repeat(2, 1fr); /* 1 column on very small screens */
   }
 
   .skill-card {

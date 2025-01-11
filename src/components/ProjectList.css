@@ -116,6 +116,22 @@ body{overflow-y: hidden;}
   position: relative;
   
 }
+.project-image::after {
+  content: "Preview";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: .7;
+  font-size: 56px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  background: rgba(255, 255, 255, 0.758);
+  padding: 10px 20px;
+  border-radius: 5px;
+  pointer-events: none; /* Ensure the overlay doesn't block interactions */
+}
+
 
 /* Image styling */
 .image {
@@ -123,8 +139,11 @@ body{overflow-y: hidden;}
   max-width: 100%;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border: 6px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: border 0.3s ease;
 }
+
 
 
 /* Project info styles */
@@ -147,15 +166,15 @@ body{overflow-y: hidden;}
 .project-info a {
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 26px;
   padding: 12px 24px;
-  border: 0px solid white;
+  border: 3px solid black;
   border-radius: 5px;
   background-color: transparent;
   transition: all 0.3s ease;
   display: inline-block;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Stronger shadow */
 }
 /* View Project Button Dark / light styling*/
 .project-list-container.dark .project-info a {
@@ -163,7 +182,7 @@ body{overflow-y: hidden;}
   color: #ffffff;
 }
 .project-list-container.light .project-info a {
-  background: var(--btn-light);
+  background: linear-gradient(145deg, #00a2ffad, #ffffff);
   color: #121212;
 }
 /* View Project Dark / light Hovers */
