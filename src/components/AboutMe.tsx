@@ -13,8 +13,10 @@ const AboutMe: React.FC = () => {
           <div className="about-section-banner-text">
             <h1 className="about-section-name highlight">Billy Brown</h1>
             <p className="about-section-title">
-              Cybersecurity & IT Professional
+              Cybersecurity & IT Professional | Cardiff, Wales
             </p>
+            <div className="title-bar"></div>
+
             <p className="about-section-description">
               {" "}
               I'm a First Class Honours Cybersecurity graduate with experience
@@ -68,9 +70,9 @@ const AboutMe: React.FC = () => {
               <p className="role highlight">BSc (Hons) Cyber Security</p>
               <p className="duration">2021 - 2024</p>
               <p className="description">
-                I developed hands-on cybersecurity skills through projects like
-                creating a cybersecurity learning game and working on an ISO
-                27001 compliance application for a business.
+                I developed hands-on foundational skills through projects like
+                creating a cybersecurity learning game and deploying honeypots,
+                creating a web store in a team.
               </p>
             </div>
             <div className="experience-card">
@@ -99,6 +101,7 @@ const AboutMe: React.FC = () => {
         {/* Contact Me Section */}
         <section className="contact-section">
           <h2 className="contact-title">Get In Touch</h2>
+          <div className="title-bar"></div>
           <p className="contact-description">
             If you'd like to reach out, whether for a project or to connect,
             feel free to drop me a message.

@@ -58,6 +58,23 @@ body {
   text-align: left; /* Left-align section titles */
 }
 
+/* Custom Horizontal Bar */
+.title-bar {
+  background-color: var(--light-blue-bg); /* Choose a color that fits your theme */
+  height: 3px; /* Adjust the height to control the thickness of the bar */
+  width: 100%; /* Full width */
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: right; /* Align location to the right */
+  margin-left: auto; /* Push the location to the right */
+  color: var(--dark-bg-blue); /* Adjust color to suit your design */
+}
+
+
+
 .about-section-description {
   font-weight: 200;
   font-size: 1rem;
