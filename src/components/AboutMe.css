@@ -49,7 +49,7 @@ body {
 }
 
 .about-section-name.highlight {
-  color: var(--light-blue-bg);
+  color: var(--accent-colour);
 }
 
 .about-section-title {
@@ -60,7 +60,7 @@ body {
 
 /* Custom Horizontal Bar */
 .title-bar {
-  background-color: var(--light-blue-bg); /* Choose a color that fits your theme */
+  background-color: var(--accent-colour); /* Choose a color that fits your theme */
   height: 3px; /* Adjust the height to control the thickness of the bar */
   width: 100%; /* Full width */
 }
@@ -86,7 +86,7 @@ body {
 }
 
 .highlight {
-  color: var(--light-blue-bg);
+  color: var(--accent-colour);
   font-weight: bold;
 }
 
@@ -173,14 +173,14 @@ body {
 /* Experience Section */
 .experience-section {
   margin-top: 60px;
-  text-align: left; /* Left-align text for experience section */
+  text-align: left;
 }
 
 .experience-section-title {
   font-size: 2rem;
   color: var(--dark-bg-blue);
   font-weight: 600;
-  text-align: left; /* Left-align experience section title */
+  text-align: left;
 }
 
 .experience-grid {
@@ -190,17 +190,21 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  justify-content: left; /* Align experience grid items to the left */
+  justify-content: left;
 }
 
 .experience-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   text-align: center;
+
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
+  min-height: 310px;
 }
 
 .experience-card:hover {
@@ -219,13 +223,15 @@ body {
 .company-name {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 20px;
+  margin-top: 10px; /* Reduced space above the company name */
+  margin-bottom: 5px; /* Reduced space below the company name */
 }
 
 .role {
   font-size: 1.2rem;
   font-weight: 500;
-  margin-top: 10px;
+  margin-top: 5px; /* Reduced space above the role */
+  margin-bottom: 5px; /* Reduced space below the role */
 }
 
 .duration {
@@ -239,7 +245,37 @@ body {
   margin-top: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  flex-grow: 1;
 }
+
+.technologies {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-tag {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.body-container.dark .tech-tag{
+  background-color: var(--accent-colour);
+  color: var(--dark-text);
+}
+
+.body-container.light .tech-tag{
+  background-color: var(--accent-colour);
+  color: var(--light-text);
+}
+
 
 /* Contact Section */
 .contact-section {
@@ -284,21 +320,17 @@ body {
 }
 
 /* Dark and Light Mode */
-.body-container.dark .experience-card {
-  background: var(--btn-dark);
-  color: var(--dark-text);
-}
 
+.body-container.dark .experience-card,
 .body-container.dark .skill-card,
-.body-container.dark .social-media-item,
-.body-container.dark .experience-card {
+.body-container.dark .social-media-item {
   background: var(--btn-dark);
   color: var(--dark-text);
 }
 
+.body-container.light .experience-card,
 .body-container.light .skill-card,
-.body-container.light .social-media-item,
-.body-container.light .experience-card {
+.body-container.light .social-media-item {
   background: var(--btn-light);
   color: var(--light-text);
 }
@@ -441,5 +473,15 @@ body {
   .skill-name {
     font-size: 0.9rem;
   }
+
+  
+
+
+.tech-tag {
+  padding: 4px 8px;
+
+}
+
+
 
 }

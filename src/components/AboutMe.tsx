@@ -60,40 +60,83 @@ const AboutMe: React.FC = () => {
           </div>
         </section>
 
-        {/* Work Experience Section */}
+        {/* Experience Section */}
         <section className="experience-section">
-          <h2 className="experience-section-title">Work Experience</h2>
+          <h2 className="experience-section-title">Experience</h2>
           <div className="experience-grid">
+            {/* University of West London */}
             <div className="experience-card">
               <div className="experience-pin">📍</div>
               <h3 className="company-name">University of West London</h3>
               <p className="role highlight">BSc (Hons) Cyber Security</p>
               <p className="duration">2021 - 2024</p>
               <p className="description">
-                I developed hands-on foundational skills through projects like
-                creating a cybersecurity learning game and deploying honeypots,
-                creating a web store in a team.
+                Expanded my knowledge of computer science theory, while working
+                on projects such as a cybersecurity learning game, deploying
+                honeypots, and collaborating on a web store, etc..
               </p>
+
+              {/* Technologies Section */}
+              <div className="technologies">
+                <div className="tech-tag">Programming</div>
+                <div className="tech-tag">Unity</div>
+                <div className="tech-tag">VirtualBox</div>
+                <div className="tech-tag">Wireshark</div>
+              </div>
             </div>
-            <div className="experience-card">
-              <div className="experience-pin">📍</div>
-              <h3 className="company-name">Crystal I.T</h3>
-              <p className="role highlight">Volunteer</p>
-              <p className="duration">2017 - 2018</p>
-              <p className="description">
-                I supported IT tasks like troubleshooting hardware, assisting
-                with networking, and contributing to graphic design.
-              </p>
-            </div>
+
+            {/* Cardiff & Vale College */}
             <div className="experience-card">
               <div className="experience-pin">📍</div>
               <h3 className="company-name">Cardiff & Vale College</h3>
               <p className="role highlight">Level 2-3 I.T Student</p>
-              <p className="duration">2019 - 2021</p>
+              <p className="duration">2018 - 2021</p>
               <p className="description">
                 I built a strong IT foundation by working on projects in web,
                 game, and app development, along with technical documentation.
               </p>
+
+              {/* Technologies Section */}
+              <div className="technologies">
+                <div className="tech-tag">Fundamentals</div>
+                <div className="tech-tag">Office</div>
+                <div className="tech-tag">C-Family</div>
+              </div>
+            </div>
+
+            {/* Crystal I.T */}
+            <div className="experience-card">
+              <div className="experience-pin">📍</div>
+              <h3 className="company-name">Crystal I.T</h3>
+              <p className="role highlight">Volunteer</p>
+              <p className="duration">2017 - 2018 - 6 Months</p>
+              <p className="description">
+                Helping with troubleshooting hardware, assisting with
+                networking, and basic graphic design.
+              </p>
+
+              {/* Technologies Section */}
+              <div className="technologies">
+                <div className="tech-tag">Networking</div>
+                <div className="tech-tag">Hardware</div>
+                <div className="tech-tag">Graphic Design</div>
+              </div>
+            </div>
+
+            {/* British Heart */}
+            <div className="experience-card">
+              <div className="experience-pin">📍</div>
+              <h3 className="company-name">British Heart Foundation</h3>
+              <p className="role highlight">Volunteer</p>
+              <p className="duration">2018 - 2018 - 4 Months</p>
+              <p className="description">
+                Customer Service, basic store operations, item tagging.
+              </p>
+
+              {/* Technologies Section */}
+              <div className="technologies">
+                <div className="tech-tag">Customer Service</div>
+              </div>
             </div>
           </div>
         </section>
