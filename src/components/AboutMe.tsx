@@ -144,32 +144,34 @@ const AboutMe: React.FC = () => {
         </section>
 
         {/* Projects Section */}
-        <section className="projects-section">
-          <h2 className="projects-section-title">My Projects</h2>
-          <div className="projects-grid">
+        <section className="about-page-projects-section">
+          <h2 className="about-page-projects-section-title">My Projects</h2>
+          <div className="about-page-projects-grid">
             {Object.keys(projects).map((key) => {
               const project = projects[key];
               return (
                 <a
                   href={`#${project.link}`}
-                  className="project-card"
+                  className="about-page-projects-card"
                   key={key}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <div className="project-image-container">
+                  <div className="about-page-projects-image-container">
                     <img
                       src={project.main_image}
                       alt={`${project.title} Thumbnail`}
-                      className="project-image"
+                      className="about-page-projects-image"
                     />
                   </div>
-                  <div className="project-details">
-                    <h3 className="project-title">{project.title}</h3>
-                    <p className="project-description">
+                  <div className="about-page-projects-details">
+                    <h3 className="about-page-projects-title">
+                      {project.title}
+                    </h3>
+                    <p className="about-page-projects-description">
                       {project.basic_description}
                     </p>
-                    <div className="project-tech">
+                    <div className="about-page-projects-tech">
                       {project.tech.split(", ").map((tech, index) => (
                         <span key={index} className="tech-tag">
                           {tech}

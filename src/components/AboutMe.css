@@ -277,28 +277,28 @@ body {
 }
 
 
-/* projects section */
-.projects-section {
+/* Projects section */
+.about-page-projects-section {
   margin-top: 30px;
   padding: 2rem 0; /* Consistent vertical padding */
   width: 100%; /* Full width */
   background-color: var(--background-color);
 }
 
-.projects-grid {
+.about-page-projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
   gap: 2rem;
 }
 
-.project-card {
+.about-page-projects-card {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: var(--text-color);
 }
 
-.project-image-container {
+.about-page-projects-image-container {
   width: 100%;
   border: 1px solid rgba(211, 211, 211, 0.5); /* Light gray border around the image */
   border-radius: 10px; /* Rounded corners */
@@ -306,12 +306,12 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-image-container:hover {
+.about-page-projects-image-container:hover {
   transform: translateY(-5px); /* Subtle hover raise for the image */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow */
 }
 
-.project-image {
+.about-page-projects-image {
   border-radius: 10px;
   padding: 4px;
   width: 100%;
@@ -319,23 +319,19 @@ body {
   object-fit: cover; /* Ensure the image covers the container */
 }
 
-
-
-.project-title {
+.about-page-projects-title {
   font-size: 1.5rem;
   text-align: left;
-
 }
 
-.project-description {
+.about-page-projects-description {
   font-size: 1rem;
   margin: 0 0 1rem;
   color: var(--text-color-secondary);
   text-align: left;
-
 }
 
-.project-tech {
+.about-page-projects-tech {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -548,11 +544,11 @@ body {
     font-size: 0.9rem;
   }
 
-  .project-title {
+  .about-page-project-title {
     text-align: center;
   }
   
-  .project-description {
+  .about-page-project-description {
     text-align: center;
   }
 
