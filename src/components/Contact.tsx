@@ -63,7 +63,7 @@ const Contact = () => {
               alt="Twitter"
               className="social-media-logo"
             />
-            <span>Twitter</span>
+            <span>X</span>
           </a>
         </div>
 

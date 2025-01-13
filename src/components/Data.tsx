@@ -38,7 +38,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
 
       deep_description:
         "A gamified learning tool designed to upskill Welsh lower-level teachers in basic cybersecurity concepts following the introduction of the new Welsh Curriculum. The game covers essential topics such as password management, phishing awareness, and data protection in a fun and interactive way",
-      tech: "Created using Unity with C#.",
+      tech: "Unity, C#, GIMP",
       learned:
         "During this project I learnt: How to search for existing resources & find gaps, how to gather user feedback and implement it",
       do_different:
@@ -60,9 +60,9 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     hammurabi: {
       title: "Hammurabi - C# Form Game",
       basic_description:
-        "A full-stack web application designed for collaborative learning and project management.",
+        "One of my early programming projects, in this project I learned how to make reusuble methods & functions in order to declutter my program.",
       deep_description:
-        "This platform allows users to create, manage, and collaborate on projects in real-time, featuring task tracking and document sharing.",
+        "Created in Visual Studio using C#, It was my first programming project, it recreates the web game Hammurabi / Story, It's a basic concept, how long can you last? Feed your people, buy & sell land, while fighting starvation and new coming city members.",
       main_image: "/images/Hammurabi/Hammurabi1.JPG",
       learned:
         "One of my early programming projects, in this project I learned how to make reusuble methods & functions in order to declutter my program.",
@@ -79,7 +79,7 @@ export const DataProvider: React.FC<DataProviderProps> = ({ children }) => {
     "meteor-invaders": {
       title: "Meteor Invaders - C# Form Game",
       basic_description:
-        "A full-stack web application designed for collaborative learning and project management.",
+        "A basic Invaders game, a second project of mine, where I learned classes, and use them with methods and functions to make a playable character, and a shop to change the players stats.",
       deep_description:
         "This platform allows users to create, manage, and collaborate on projects in real-time, featuring task tracking and document sharing.",
       main_image: "/images/Meteor-Invaders/meteor-invaders1.JPG",

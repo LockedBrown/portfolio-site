@@ -1,9 +1,11 @@
 import React from "react";
 import { useTheme } from "./ThemeContext";
 import "./AboutMe.css";
+import { useData } from "./Data";
 
 const AboutMe: React.FC = () => {
   const { isDarkMode } = useTheme();
+  const { projects } = useData();
 
   return (
     <div className={`body-container ${isDarkMode ? "dark" : "light"}`}>
@@ -141,6 +143,46 @@ const AboutMe: React.FC = () => {
           </div>
         </section>
 
+        {/* Projects Section */}
+        <section className="projects-section">
+          <h2 className="projects-section-title">My Projects</h2>
+          <div className="projects-grid">
+            {Object.keys(projects).map((key) => {
+              const project = projects[key];
+              return (
+                <a
+                  href={`#${project.link}`}
+                  className="project-card"
+                  key={key}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="project-image-container">
+                    <img
+                      src={project.main_image}
+                      alt={`${project.title} Thumbnail`}
+                      className="project-image"
+                    />
+                  </div>
+                  <div className="project-details">
+                    <h3 className="project-title">{project.title}</h3>
+                    <p className="project-description">
+                      {project.basic_description}
+                    </p>
+                    <div className="project-tech">
+                      {project.tech.split(", ").map((tech, index) => (
+                        <span key={index} className="tech-tag">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
         {/* Contact Me Section */}
         <section className="contact-section">
           <h2 className="contact-title">Get In Touch</h2>
@@ -199,7 +241,7 @@ const AboutMe: React.FC = () => {
                     alt="Twitter"
                     className="social-media-logo"
                   />
-                  <span>Twitter</span>
+                  <span>X</span>
                 </a>
               </div>
             </div>
