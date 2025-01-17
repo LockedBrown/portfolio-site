@@ -151,7 +151,7 @@ const AboutMe: React.FC = () => {
               const project = projects[key];
               return (
                 <a
-                  href={`#${project.link}`}
+                  href={`/${project.link}`}
                   className="about-page-projects-card"
                   key={key}
                   target="_blank"
