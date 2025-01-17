@@ -2,6 +2,7 @@ import React from "react";
 import { useTheme } from "./ThemeContext";
 import "./AboutMe.css";
 import { useData } from "./Data";
+import { Link } from "react-router-dom";
 
 const AboutMe: React.FC = () => {
   const { isDarkMode } = useTheme();
@@ -143,19 +144,16 @@ const AboutMe: React.FC = () => {
           </div>
         </section>
 
-        {/* Projects Section */}
         <section className="about-page-projects-section">
           <h2 className="about-page-projects-section-title">My Projects</h2>
           <div className="about-page-projects-grid">
             {Object.keys(projects).map((key) => {
               const project = projects[key];
               return (
-                <a
-                  href={`/${project.link}`}
+                <Link
+                  to={`/${project.link}`}
                   className="about-page-projects-card"
                   key={key}
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <div className="about-page-projects-image-container">
                     <img
@@ -179,7 +177,7 @@ const AboutMe: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                </a>
+                </Link>
               );
             })}
           </div>

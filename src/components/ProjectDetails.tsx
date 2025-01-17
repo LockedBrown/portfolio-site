@@ -6,13 +6,10 @@ import ImageCarousel from "./ImageCarousel";
 
 const ProjectDetails = () => {
   const { project } = useParams();
-  console.log("Project Slug:", project); // Check if it's the correct project slug
 
   const { projects } = useData();
-  console.log("Projects Data:", projects); // Check if projects data is available
 
   const projectData = projects[project as keyof typeof projects];
-  console.log("Project Data:", projectData); // Check if the correct project data is fetched
 
   const { isDarkMode } = useTheme(); // Access isDarkMode and toggleTheme from context
 
