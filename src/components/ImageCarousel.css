@@ -69,7 +69,7 @@
 }
 
 /* Navigation buttons */
-.nav-button {
+.carousel-button {
   position: absolute;
   top: 50%;
   font-size: 25px;
@@ -83,27 +83,29 @@
   border-radius: 10%;
 }
 
-.nav-button.prev {
+.carousel-button.prev {
   left: 22%;
 }
 
-.nav-button.next {
+.carousel-button.next {
   right: 22%;
 }
 
-.nav-button:hover {
+.carousel-button:hover {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* Media query adjustments for responsive behavior */
 @media (max-width: 767px) {
+  .carousel-button.prev {
+    left: 5%;
+  }
+  
+  .carousel-button.next {
+    right: 5%;
+  }
   .carousel-container {
     height: 40vh;
     max-height: 350px;
   }
 
-  .nav-button.prev, .nav-button.next {
-    left: 10px;
-    right: 10px;
-  }
 }

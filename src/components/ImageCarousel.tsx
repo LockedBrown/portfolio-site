@@ -84,10 +84,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
           );
         })}
       </div>
-      <button className="nav-button prev" onClick={handlePrev}>
+      <button className="carousel-button prev" onClick={handlePrev}>
         &lt;
       </button>
-      <button className="nav-button next" onClick={handleNext}>
+      <button className="carousel-button next" onClick={handleNext}>
         &gt;
       </button>
     </div>

@@ -47,14 +47,14 @@
 
 }
 
-.details-container.light .carousel-container .nav-button {
+.details-container.light .carousel-container .carousel-button {
   background: var(--btn-light); /* Subtle gradient */
   color: var(--light-text); /* Dark text color */
 
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2); /* Shadow for light mode */
 
 }
-.details-container.light .carousel-container .nav-button:hover{
+.details-container.light .carousel-container .carousel-button:hover{
   background: var(--dark-bg-blue); /* Light blue on hover */
 
 }
@@ -88,13 +88,13 @@
   color: var(--dark-text);
 }
 /* Dark mode styles */
-.details-container.dark .carousel-container .nav-button {
+.details-container.dark .carousel-container .carousel-button {
   background: var(--btn-dark); ; /* Gradient for dark mode */
   color: var(--dark-text);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
 }
 
-.details-container.dark .carousel-container .nav-button:hover{
+.details-container.dark .carousel-container .carousel-button:hover{
   background: var(--btn-hover-dark); ; /* Vibrant blue on hover */
 }
 
